@@ -24,7 +24,7 @@ Here is the complete code wrapped in a code block:
 import speech_recognition as sr
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-# Load BanglaGPT model
+
 model_name = "csebuetnlp/banglagpt"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
@@ -59,7 +59,6 @@ def generate_bangla_caption(keywords, max_length=50):
 
     return tokenizer.decode(output[0], skip_special_tokens=True)
 
-# Get user input via voice
 keywords_spoken = recognize_speech()
 
 if keywords_spoken:
